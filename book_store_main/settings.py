@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'Books.apps.BooksConfig',
     'Recommendations.apps.RecommendationsConfig'
-    'Auth'
+
 ]
 
 MIDDLEWARE = [
