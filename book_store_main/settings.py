@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'Books.apps.BooksConfig',
-    'Recommendations.apps.RecommendationsConfig'
+    'Recommendations.apps.RecommendationsConfig',
+    'Reviews.apps.ReviewsConfig',
 
 ]
 
