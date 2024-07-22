@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'Recommendations.apps.RecommendationsConfig',
     'Reviews.apps.ReviewsConfig',
     'rest_framework.authtoken',
+    'drf_spectacular',
 
 ]
 
@@ -145,10 +146,19 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 
 }
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=220),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'book_store',
+    'DESCRIPTION': 'rate your favorite books and get some recommendations',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
 }
